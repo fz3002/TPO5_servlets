@@ -11,11 +11,6 @@ import javax.servlet.annotation.*;
 
 @WebServlet(name = "CarsServlet", value = "/cars/result")
 public class CarsServlet extends HttpServlet {
-    private String message;
-
-    public void init() {
-        message = "Hello World!";
-    }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -49,8 +44,5 @@ public class CarsServlet extends HttpServlet {
 
         // End of HTML table
         out.println("</table>");
-    }
-
-    public void destroy() {
     }
 }

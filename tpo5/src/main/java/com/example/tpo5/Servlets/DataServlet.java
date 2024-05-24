@@ -33,15 +33,7 @@ public class DataServlet extends HttpServlet {
         } catch (CarTypeNotFoundException | CarsNotFoundException e) {
             throw new ServletException(e);
         }
-        /*
-        response.setContentType("text/html");
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + "Waiting" + "</h1>");
-        out.println("</body></html>");
-        */
         Gson gson = new Gson();
         String jsonCars = gson.toJson(cars);
         System.out.println(jsonCars);
